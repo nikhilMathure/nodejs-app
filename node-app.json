@@ -1,0 +1,82 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:eu-north-1:564493692631:task-definition/node-app:1",
+    "containerDefinitions": [
+        {
+            "name": "nodeapp",
+            "image": "564493692631.dkr.ecr.eu-north-1.amazonaws.com/nodejs-app",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "nodeapp-80-tcp",
+                    "containerPort": 80,
+                    "hostPort": 0,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "ulimits": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-create-group": "true",
+                    "awslogs-group": "/ecs/node-app",
+                    "awslogs-region": "eu-north-1",
+                    "awslogs-stream-prefix": "ecs"
+                },
+                "secretOptions": []
+            }
+        }
+    ],
+    "family": "node-app",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2"
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "cpu": "1024",
+    "memory": "3072",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2024-02-14T08:15:15.640Z",
+    "registeredBy": "arn:aws:iam::564493692631:root",
+    "tags": []
+}
+JSON
+
+
+
+CloudShell
+Feedback
+© 2024, Amazon Web Services, Inc. or its affiliates.
+Privacy
+Terms
+Cookie preferences
